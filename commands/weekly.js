@@ -1,8 +1,8 @@
 exports.execute = async (client, message, args) => {
     let amount = Math.floor(Math.random() * 1000) + 500;
     let addMoney = client.eco.weekly(client.ecoAddUser, amount);
-    if (addMoney.onCooldown) return message.reply(`You have already claimed your weekly credit. Come back after ${addMoney.time.days} days, ${addMoney.time.hours} hours, ${addMoney.time.minutes} minutes & ${addMoney.time.seconds} seconds to claim it again.`);
-    else return message.reply(`You have claimed **${addMoney.amount}** 💸 as your weekly credit & now you have **${addMoney.after}** 💸. But you will lose your balance if you do not subscribe to ZeroSync on yt :P`);
+    if (addMoney.onCooldown) return message.reply(`Bạn đã nhận số **Hoa** ngày hôm nay,hãy đợi thêm ${addMoney.time.days} Ngày, ${addMoney.time.hours} giờ, ${addMoney.time.minutes} phút & ${addMoney.time.seconds} giây để nhận lần nữa`);
+    else return message.reply(`Bạn đã nhận được **${addMoney.amount}** <:hoa:891221416958119936> :P`);
 };
 
 exports.help = {
