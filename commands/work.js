@@ -1,8 +1,8 @@
 module.exports.execute = async (client, message, args) => {
-    let amount = Math.floor(Math.random() * 1500) + 1000;
+    let amount = Math.floor(Math.random() * 20) + 5;
     let work = client.eco.work(client.ecoAddUser, amount);
-    if (work.onCooldown) return message.reply(`You are tired rn. Come back after ${work.time.minutes} minutes & ${work.time.seconds} seconds to work again.`);
-    else return message.reply(`You worked as **${work.workedAs}** and earned **${work.amount}** 💸. Now you have **${work.after}** 💸.`);
+    if (work.onCooldown) return message.reply(`Bạn hãy đợi thêm ${work.time.minutes} phút & ${work.time.seconds} giây để trông **Hoa** lần nữa.`);
+    else return message.reply(`Bạn đã trông hoa chăm chỉ và nhận được **${work.amount}** <:hoa:891221416958119936>.`);
 };
 
 module.exports.help = {
