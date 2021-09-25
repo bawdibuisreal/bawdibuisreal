@@ -1,12 +1,12 @@
 exports.execute = async (client, message, args) => {
   let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) 
   let authordata = client.eco.fetchMoney(message.author.id) 
-  if (!member) return message.channel.send('Please mention the person or give their ID') 
+  if (!member) return message.channel.send('Xin hãy ping người bạn muốn chuyển **Hoa**') 
   let amount = args[1]
-  if (!amount || isNaN(amount)) return message.channel.send('Please enter a valid amount to transfer') 
-  if(authordata.amount < amount) return message.channel.send('Looks like you don\'t have that much money') 
+  if (!amount || isNaN(amount)) return message.channel.send('Xin hãy nhập số **Hoa** muốn chuyển') 
+  if(authordata.amount < amount) return message.channel.send('Hình như bạn không có đủ số tiền để chuyển') 
   await client.eco.transfer(message.author.id, member.id, amount) 
-  return message.channel.send(`You have successfully transferred 💸**${amount}** to ** ${member.user.tag}**.`)
+  return message.channel.send(`Bạn đã chuyển **Hoa** thành công**${amount}** <:hoa:891221416958119936> đến ** ${member.user.tag}**.`)
 }
 exports.help = {
   name: "transfer",
