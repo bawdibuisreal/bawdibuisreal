@@ -1,8 +1,8 @@
 module.exports.execute = async (client, message, args) => {
     let amount = Math.floor(Math.random() * 500) + 100;
     let addMoney = client.eco.daily(client.ecoAddUser, amount);
-    if (addMoney.onCooldown) return message.reply(`You have already claimed your daily credit. Come back after ${addMoney.time.hours} hours, ${addMoney.time.minutes} minutes & ${addMoney.time.seconds} seconds to claim it again.`);
-    else return message.reply(`You have claimed **${addMoney.amount}** 💸 as your daily credit & now you have **${addMoney.after}** 💸.`);
+    if (addMoney.onCooldown) return message.reply(`Bạn đã nhận số **Hoa** ngày hôm nay,hãy đợi thêm ${addMoney.time.hours} giờ, ${addMoney.time.minutes} phút & ${addMoney.time.seconds} giây để nhận thêm.`);
+    else return message.reply(`Bạn đã nhận được **${addMoney.amount}** <:hoa:891221416958119936>.`);
 };
 
 module.exports.help = {
