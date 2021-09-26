@@ -10,7 +10,7 @@ exports.execute = async (client, message, args) => {
     const embed = new MessageEmbed()
         .setTitle(`Money Added!`)
         .addField(`User`, `<@${data.user}>`)
-        .addField(`Số tiền`, `${data.amount} <:hoa:891221416958119936> `)
+        .addField(`Số tiền`, `${data.amount} <:emoji_40:891605292788371488> `)
         .addField(`Total Amount`, data.after)
         .setColor("RANDOM")
         .setThumbnail(user.displayAvatarURL)
