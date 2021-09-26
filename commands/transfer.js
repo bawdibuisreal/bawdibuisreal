@@ -6,7 +6,7 @@ exports.execute = async (client, message, args) => {
   if (!amount || isNaN(amount)) return message.channel.send('Xin hãy nhập số **Hoa** muốn chuyển') 
   if(authordata.amount < amount) return message.channel.send('Hình như bạn không có đủ số tiền để chuyển') 
   await client.eco.transfer(message.author.id, member.id, amount) 
-  return message.channel.send(`Bạn đã chuyển **Hoa** thành công**${amount}** <:hoa:891221416958119936> đến ** ${member.user.tag}**.`)
+  return message.channel.send(`Bạn đã chuyển **Hoa** thành công**${amount}** <:emoji_40:891605292788371488> đến ** ${member.user.tag}**.`)
 }
 exports.help = {
   name: "transfer",
